@@ -49,38 +49,42 @@ This pipeline worked excellent on the test images, and the first video worked ju
 
 Below is a sample of the input and output images:
 
-![Original Image][test1]
 Original
-![Output Image][output1]
+![Original Image][test1]
+
 Output
+![Output Image][output1]
 
-####Other images:
 
-[Solid White Right Test Image][test2]
-[Solid White Right Output Image][output2]
+#### Other images:
 
-[Solid Yellow Curve Test Image][test3]
-[Solid Yellow Curve Output Image][output3]
+2. Solid White Right
+  * [Test][test2]
+  * [Output][output2]
+3. Solid Yellow Curve
+  * [Test][test3]
+  * [Output][output3]
+4. Solid Yellow Curve 2
+  * [Test][test4]
+  * [Output][output4]
+5. Solid Yellow Left
+  * [Test][test5]
+  * [Output][output5]
+6. White Car Lane Switch
+  * [Test][test6]
+  * [Output][output6]
 
-[Solid Yellow Curve 2 Test Image][test4]
-[Solid Yellow Curve 2 Output Image][output4]
+#### Videos:
 
-[Solid Yellow Left Test Image][test5]
-[Solid Yellow Left Output Image][output5]
-
-[White Car Lane Switch Test Image][test6]
-[White Car Lane Switch Output Image][output6]
-
-####Videos:
-
-[Solid White Right Test](./test_videos/solidWhiteRight.mp4 "Solid White Right Test")
-[Solid White Right Output](./test_videos_output/solidWhiteRight.mp4 "Solid White Right Output")
-
-[Solid Yellow Left Test](./test_videos/solidYellowLeft.mp4 "Solid Yellow Left Test")
-[Solid Yellow Left Output](./test_videos_output/solidYellowLeft.mp4 "Solid Yellow Left Output")
-
-[Challenge Test](./test_videos/challenge.mp4 "Challenge Test Video")
-[Challenge Output](./test_videos_output/challenge.mp4 "Challenge Output")
+1. Solid White Right
+  * [Test](./test_videos/solidWhiteRight.mp4 "Solid White Right Test")
+  * [Output](./test_videos_output/solidWhiteRight.mp4 "Solid White Right Output")
+2. Solid Yellow Left
+  * [Test](./test_videos/solidYellowLeft.mp4 "Solid Yellow Left Test")
+  * [Output](./test_videos_output/solidYellowLeft.mp4 "Solid Yellow Left Output")
+3. Challenge
+  * [Test](./test_videos/challenge.mp4 "Challenge Test Video")
+  * [Output](./test_videos_output/challenge.mp4 "Challenge Output")
 
 
 ### 2. Identify potential shortcomings and improvements
