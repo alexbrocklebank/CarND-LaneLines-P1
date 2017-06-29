@@ -16,12 +16,12 @@ The goals / steps of this project are the following:
 [test5]: ./test_images/solidYellowLeft.jpg "Solid Yellow Left Test Image"
 [test6]: ./test_images/whiteCarLaneSwitch.jpg "White Car Lane Switch Test Image"
 
-[output1]: ./test_images_output/solidWhiteCurve.jpg "Solid White Curve Test Image"
-[output2]: ./test_images_output/solidWhiteRight.jpg "Solid White Right Test Image"
-[output3]: ./test_images_output/solidYellowCurve.jpg "Solid Yellow Curve Test Image"
-[output4]: ./test_images_output/solidYellowCurve2.jpg "Solid Yellow Curve 2 Test Image"
-[output5]: ./test_images_output/solidYellowLeft.jpg "Solid Yellow Left Test Image"
-[output6]: ./test_images_output/whiteCarLaneSwitch.jpg "White Car Lane Switch Test Image"
+[output1]: ./test_images_output/solidWhiteCurve.jpg "Solid White Curve Output Image"
+[output2]: ./test_images_output/solidWhiteRight.jpg "Solid White Right Output Image"
+[output3]: ./test_images_output/solidYellowCurve.jpg "Solid Yellow Curve Output Image"
+[output4]: ./test_images_output/solidYellowCurve2.jpg "Solid Yellow Curve 2 Output Image"
+[output5]: ./test_images_output/solidYellowLeft.jpg "Solid Yellow Left Output Image"
+[output6]: ./test_images_output/whiteCarLaneSwitch.jpg "White Car Lane Switch Output Image"
 
 ---
 
@@ -29,7 +29,7 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps.
+My pipeline consisted of 7 steps, with optional debugging output after each image modification.  These steps are:
 
 1. First, I converted the images to grayscale, fed the grayscale image into a gaussian blur function, and lastly performed a Canny Edge Detection on the image.  All of this functionality was provided by the helper functions grayscale(), gaussian_blur(), and canny().
 
@@ -47,9 +47,40 @@ My pipeline consisted of 5 steps.
 
 This pipeline worked excellent on the test images, and the first video worked just as well.  Video number 2 was a little more difficult, with a few frames having no line detected and a few with erratic lane lines drawn.  The challenge video however, did not work at all, the curvature of the road was too extreme for the lane lines to be drawn or detected correctly.
 
-Below is the input and output images:
+Below is a sample of the input and output images:
 
-![Original Image][test1]  ![Output Image][output1]
+![Original Image][test1]
+Original
+![Output Image][output1]
+Output
+
+####Other images:
+
+[Solid White Right Test Image][test2]
+[Solid White Right Output Image][output2]
+
+[Solid Yellow Curve Test Image][test3]
+[Solid Yellow Curve Output Image][output3]
+
+[Solid Yellow Curve 2 Test Image][test4]
+[Solid Yellow Curve 2 Output Image][output4]
+
+[Solid Yellow Left Test Image][test5]
+[Solid Yellow Left Output Image][output5]
+
+[White Car Lane Switch Test Image][test6]
+[White Car Lane Switch Output Image][output6]
+
+####Videos:
+
+[Solid White Right Test](./test_videos/solidWhiteRight.mp4 "Solid White Right Test")
+[Solid White Right Output](./test_videos_output/solidWhiteRight.mp4 "Solid White Right Output")
+
+[Solid Yellow Left Test](./test_videos/solidYellowLeft.mp4 "Solid Yellow Left Test")
+[Solid Yellow Left Output](./test_videos_output/solidYellowLeft.mp4 "Solid Yellow Left Output")
+
+[Challenge Test](./test_videos/challenge.mp4 "Challenge Test Video")
+[Challenge Output](./test_videos_output/challenge.mp4 "Challenge Output")
 
 
 ### 2. Identify potential shortcomings and improvements
@@ -66,3 +97,5 @@ I detected a few shortcoming with the current pipeline I have implemented:
 * Another shortcoming effecting the challenge video and curved lanes is that my Region Of Interest is too narrow and cuts the lane off and out of view.  The region will need to be widened or, better yet, curve with the lane.
 
 * Small adjustments to the lane lines accuracy can also be obtained by my implementation of a filter for lines that are outliers in the data.  Extra lines detected by the hough_lines function are added into the lane line detected, moving it slightly.
+
+* Many optimizations can be made to speed up the pipeline for real-time video feed use.  Making fewer image copies and translations, with the removal of debugging code and improved lane line drawing, would make execution between 15 and 40 percent faster.
